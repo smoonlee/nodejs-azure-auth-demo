@@ -1,0 +1,1 @@
+{"root":["./src/app.ts","./src/config.ts","./src/index.ts","./src/logger.ts","./src/controllers/authcontroller.ts","./src/middleware/errorhandler.ts","./src/routes/authroutes.ts","./src/services/azureauthenticator.ts","./src/validators/credentialschema.ts"],"version":"5.9.3"}
