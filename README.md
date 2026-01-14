@@ -22,8 +22,18 @@ Static assets are served by Vite in development. In production, the Express app 
 
 1. Copy `.env.example` to `.env` and review values:
    ```env
+   # Copy this file to .env and update values as needed.
    PORT=4000
    DEFAULT_SCOPE=https://management.azure.com/.default
+
+   # Optional: local-only dev credentials to prefill the client form
+   # These are only read while running `npm run dev` and should reference
+   # disposable service principals. Never commit real secrets.
+   VITE_DEV_TENANT_ID=
+   VITE_DEV_CLIENT_ID=
+   VITE_DEV_CLIENT_SECRET=
+   VITE_DEV_SCOPE=https://management.azure.com/.default
+   VITE_DEV_AUTHORITY_HOST=https://login.microsoftonline.com
    ```
 2. When hosting, allowlist browser origins via `ALLOWED_ORIGINS` and keep actual secrets in a secure store (Key Vault, etc.).
 3. (Optional) Override the Vite dev target that Express proxies to during development with `VITE_DEV_SERVER` (defaults to `http://localhost:5173`).
